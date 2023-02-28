@@ -1,3 +1,12 @@
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Autor: tu
+ * @Date: 2023-02-22 09:37:55
+ * @LastEditors: tu
+ * @LastEditTime: 2023-02-28 18:08:11
+ * @FilePath: /chatGPT/src/components/btn-assembly.vue
+-->
 <template>
   <div class="btn">
     <div>{{ num }}</div>
@@ -7,7 +16,6 @@
 </template>
 
 <script setup>
-import { ref, toRefs } from "vue";
 const emit = defineEmits(["add"]);
 const props = defineProps({
   num: {
@@ -15,7 +23,7 @@ const props = defineProps({
     default: 0,
   },
 });
-const { num } = toRefs(props);
+const { num } = toRef(props);
 
 const number = ref(0);
 const add = () => {

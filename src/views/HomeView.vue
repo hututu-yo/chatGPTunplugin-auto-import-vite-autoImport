@@ -4,13 +4,13 @@
  * @Autor: tu
  * @Date: 2023-02-10 12:56:55
  * @LastEditors: tu
- * @LastEditTime: 2023-02-27 10:10:15
+ * @LastEditTime: 2023-02-28 18:09:31
  * @FilePath: /chatGPT/src/views/HomeView.vue
 -->
 <template>
   <div class="home">
     <div>emit,prop</div>
-    <!-- <btnAssembly @add="add" :num="num" /> -->
+    <BtnAssembly @add="add" :num="num" />
     <div>{{ num }}</div>
     <br />
     <br />
@@ -24,8 +24,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-// import btnAssembly from "../components/btn-assembly.vue";
+import BtnAssembly from "../components/btn-assembly.vue";
 const counter = useCounterStore();
 const count = computed(() => counter.count);
 let num = ref(0);
